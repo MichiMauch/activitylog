@@ -1,4 +1,4 @@
-baseURL = 'https://michimauch.github.io/activitylog/'
+baseURL = 'https://michimauch.github.io/activitylog'
 languageCode = 'de-de'
 title = 'Trekko'
 paginate = 7
