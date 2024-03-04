@@ -1,0 +1,3 @@
+[submodule "themes/hugo-theme-ava"]
+	path = themes/hugo-theme-ava
+	url = https://github.com/MichiMauch/activitylog.git

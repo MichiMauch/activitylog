@@ -1,0 +1,7 @@
+<div class="post-item-box" style="background-image: url('{{ .Params.teaser_image }}'); height: 200px; background-size: cover; background-position: center;">
+    <a class="post-link-box" href="{{ .Permalink }}">{{ .Title }}</a>
+    {{ partial "date.html" . }}
+    {{- if .Params.description }}
+        <p>{{ .Params.description }}</p>
+    {{- end }}
+</div>

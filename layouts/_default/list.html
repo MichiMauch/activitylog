@@ -1,0 +1,11 @@
+{{ define "content" }}
+  <!-- Grid Container für die Post-Items, ohne <ul> oder <li> -->
+  <div class="grid-container">
+    {{ $paginator := .Paginate (.Pages) }}
+    {{ range $paginator.Pages }}
+        <!-- Einzelne Post-Items mit <div> statt <li> -->
+        {{ partial "summary" . }}
+    {{ end }}
+  </div>
+  {{ template "_internal/pagination.html" . }}
+{{- end }}

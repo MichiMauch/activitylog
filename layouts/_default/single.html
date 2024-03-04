@@ -1,0 +1,51 @@
+{{ define "body_classes" }}page{{ end }}
+
+{{ define "content" }}
+<article>
+    <header>
+        <h1>{{ .Title }}</h1>
+        <p><strong>Date:</strong> {{ .Date.Format "January 2, 2006" }}</p>
+        <p><strong>Activity Type:</strong> {{ .Params.activity_type }}</p>
+        <p><strong>Country:</strong> {{ .Params.country }}</p>
+        <p><strong>State:</strong> {{ .Params.state }}</p>
+        <!-- Fügen Sie hier weitere Front Matter-Attribute ein -->
+    </header>
+    <div id="mapid" style="height: 400px;"></div>
+    <section>
+        {{ .Content }}
+    </section>
+
+    <!-- Beispiel für die Ausgabe von benutzerdefinierten Front Matter-Attributen -->
+    <footer>
+        <p><strong>Equipment Used:</strong> {{ .Params.equipment_used }}</p>
+        <p><strong>Weather Conditions:</strong> {{ .Params.weather_conditions }}</p>
+        <!-- Fügen Sie hier weitere benutzerdefinierte Front Matter-Attribute ein -->
+    </footer>
+</article>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var map = L.map('mapid').setView([47.339, 8.05], 13);
+  
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+  
+      // Angepasster Pfad zum JSON-File
+      var jsonPath = '{{ .Site.BaseURL }}/map-json/{{ .File.TranslationBaseName }}.json';
+  
+      fetch(jsonPath)
+          .then(response => response.json())
+          .then(data => {
+              // Zugriff auf die Trackpoints unter dem Schlüssel 'points'
+              var trackpoints = data.points.map(point => [point.latitude, point.longitude]);
+              var polyline = L.polyline(trackpoints, {color: 'red'}).addTo(map);
+              // Zentriert die Karte so, dass alle Trackpoints sichtbar sind
+              map.fitBounds(polyline.getBounds());
+          })
+          .catch(error => console.log('Error loading the trackpoints:', error));
+  });
+  </script>
+  
+
+{{- end }}
