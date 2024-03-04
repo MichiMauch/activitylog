@@ -1,7 +1,7 @@
 baseURL = 'https://example.org/'
 languageCode = 'de-de'
 title = 'Trekko'
-theme = "hugo-theme-ava"
+theme = "hugo-theme-ava-old"
 paginate = 7
 mainSections = "activities"
 
