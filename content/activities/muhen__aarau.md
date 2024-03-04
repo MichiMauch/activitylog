@@ -2,7 +2,7 @@
 slug: "muhen_aarau"
 title: "Muhen - Aarau"
 teaser_image: ./images/teaser/default.png
-draft: true
+draft: false
 type: activities
 date: "2024-02-25T10:52:24+01:00"
 country: "Schweiz/Suisse/Svizzera/Svizra"
