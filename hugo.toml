@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://trekko.org/'
 languageCode = 'de-de'
 title = 'Trekko'
 paginate = 7
