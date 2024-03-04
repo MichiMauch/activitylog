@@ -14,7 +14,7 @@ mainSections = "activities"
       mediaType = "text/plain"
 
 [languages]
-  [languages.de]
+  [languages.en]
       languageName = "German"
 
 enableEmoji = true
