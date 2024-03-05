@@ -20,8 +20,8 @@ end_point_lat: 47.33880
 end_point_lon: 8.05062
 elevation_start: 0.00
 elevation_end: 0.00
-difficulty: "Bewertung: mittel."
-description: "Die Fahrradroute 'Rütihof - Gränichen - Suhr - Entfelden' beginnt in Aargau, Schweiz. Auf der 18,34 km langen Strecke können Sie die landschaftliche Schönheit der Region genießen. Mit einem Gesamtaufstieg von 257 Metern und einem Gesamtabstieg von 252 Metern bietet die Route eine ausgewogene Herausforderung. Die Gesamtdauer inklusive Pausen beträgt 1 Stunde und 10 Minuten"
+difficulty: "Bewertung: leicht."
+description: "Diese malerische Radtour beginnt in Rütihof und führt durch Gränichen, Suhr und Entfelden im schönen Kanton Aargau, Schweiz. Die 18,34 km lange Strecke bietet sanfte Anstiege und Abfahrten mit einem Gesamtaufstieg von 257 Metern und einem Gesamtabstieg von 252 Metern. Genießen Sie die abwechslungsreiche Landschaft und die idyllischen Dörfer auf dieser entspannten Tour"
 teaser_image: ./images/teaser/ruetihof_graenichen_suhr_entfelden.png
 // trackpoints:
 ---
