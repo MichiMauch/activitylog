@@ -1,0 +1,18 @@
+<div class="flip-card">
+    <div class="flip-card-inner">
+      <!-- Flip Card Front Side (Angepasst mit Ihrem aktuellen Code) -->
+      <div class="flip-card-front" style="background-image: url('{{ .Params.teaser_image }}'); background-size: cover; background-position: center;">
+        <div>{{ partial "date.html" . }}</div>
+        <a class="post-link-box" href="{{ .Permalink }}">{{ .Title }}</a>
+        {{- if .Params.description }}
+            <p>{{ .Params.description }}</p>
+        {{- end }}
+      </div>
+      <!-- Flip Card Back Side (Ihr Back Side Content) -->
+      <div class="flip-card-back">
+        <p>{{ .Params.activity_type }}</p>
+        <p>{{ .Params.length_km }} km</p>
+        <p>{{ .Params.moving_time }}</p>
+      </div>
+    </div>
+  </div>

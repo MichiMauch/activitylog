@@ -1,7 +1,19 @@
-<div class="post-item-box" style="background-image: url('{{ .Params.teaser_image }}'); height: 200px; background-size: cover; background-position: center;">
-    <a class="post-link-box" href="{{ .Permalink }}">{{ .Title }}</a>
-    {{ partial "date.html" . }}
-    {{- if .Params.description }}
-        <p>{{ .Params.description }}</p>
-    {{- end }}
-</div>
+<a href="{{ .Permalink }}" class="card-link">
+  <div class="card">
+    <div class="Box" style="background-image: url('{{ .Params.teaser_image }}');">
+      <div class="link-overlay">
+        <strong>{{ .Title }}</strong>
+      </div>
+    </div>
+    <div class="details">
+      <div style="font-size:1.4rem"><strong>{{ .Title }}</strong></div>
+      <div><strong>Aktivität:</strong> {{ i18n .Params.activity_type }}</div>
+      <div><strong>Länge:</strong> {{ .Params.length_km }}km</div>
+      <div><strong>Höhenmeter:</strong> {{ .Params.total_ascent }}m</div>
+      <div><strong>Dauer:</strong> {{ .Params.moving_time }}</div>
+      <button style="margin-top: 40px;">Ich will es ganz genau wissen</button>
+    </div>
+  </div>
+</a>
+
+  

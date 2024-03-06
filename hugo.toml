@@ -1,5 +1,5 @@
-baseURL = 'https://michimauch.github.io/activitylog/'
-languageCode = 'de-de'
+baseURL = 'http://localhost:1313/activitylog'
+defaultContentLanguage = 'de'
 title = 'Trekko'
 paginate = 7
 mainSections = "activities"
@@ -14,8 +14,8 @@ mainSections = "activities"
       mediaType = "text/plain"
 
 [languages]
-  [languages.en]
-      languageName = "German"
+  [languages.de]
+      languageName = "Deutsch"
 
 enableEmoji = true
 enableRobotsTXT = true

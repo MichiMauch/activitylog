@@ -1,8 +1,8 @@
 {{- if .Site.Data.welcome }}
     <p class="intro h2">{{ .Site.Data.welcome.intro }}</p>
     <p class="subtext">{{ .Site.Data.welcome.subtext }}</p>
-    <div class="grid-container">
-    {{ range first 4 (where site.RegularPages "Type" "in" "activities") }}
+    <div class="container">
+    {{ range first 6 (where site.RegularPages "Type" "in" "activities") }}
         {{ partial "summary" . }}
     {{ end }}
     </div>

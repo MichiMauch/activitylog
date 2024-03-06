@@ -982,27 +982,103 @@ pre {
     display: block; }
 
 /*
-   * boxstyle
+   * book flip
    * * *******/
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-  gap: 20px; }
+.container {
+  max-width: 1000px;
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
 
-.post-item-box {
-  border: 1px solid #ccc;
+.card {
+  position: relative;
+  margin: 20px 0;
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  transform-style: preserve-3d;
+  transform: perspective(2000px);
+  box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5), 0 20px 20px rgba(0, 0, 0, 0.5);
+  transition: 1s; }
+
+.card:hover {
+  z-index: 10000;
+  transform: perspective(2000px) rotate(-10deg);
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5), 0 10px 100px rgba(0, 0, 0, 0.5); }
+
+.card .Box {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid #000; */
+  box-sizing: border-box;
+  position: relative;
+  /* Ermöglicht eine korrekte Positionierung des absolut positionierten Overlays */
+  transform-origin: left;
+  z-index: 1;
+  transition: 1s cubic-bezier(0.15, 1.7, 0.84, 0.58);
+  background: #111;
+  background-position: center;
+  /* Zentriert das Hintergrundbild */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.card .Box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.card:hover .Box {
+  transform: rotateY(-135deg); }
+
+.card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
   padding: 20px;
-  border-radius: 5px; }
+  z-index: -1;
+  font-family: var(--font);
+  font-size: 1.2rem; }
 
-.post-link-box {
-  font-size: 20px;
-  color: #333;
-  text-decoration: none; }
+.details > div:first-child {
+  margin-bottom: 30px;
+  /* Fügt 10 Pixel Abstand unter dem Titel hinzu */ }
 
-/* Anpassungen für kleinere Bildschirme */
-@media (max-width: 600px) {
-  .grid-container {
-    grid-template-columns: 1fr; } }
+.link-overlay {
+  position: absolute;
+  bottom: 0;
+  /* Verschiebt das Overlay an die untere Kante der .Box */
+  left: 0;
+  right: 0;
+  /* Stellt sicher, dass das Overlay die volle Breite einnimmt */
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 5px;
+  /* 10px oben und unten, 5px links und rechts */
+  box-sizing: border-box;
+  text-align: center;
+  font-family: var(--font);
+  font-size: x-large;
+  line-height: 1.5;
+  background: rgba(255, 255, 255, 0.5);
+  /* Weiß mit Transparenz */
+  padding: 10px 5px;
+  /* 10px oben und unten, 5px links und rechts */
+  box-sizing: border-box;
+  color: #fff; }
+
+.card-link {
+  color: black;
+  /* Farbe des Links */
+  text-decoration: none !important;
+  /* Entfernt die Unterstreichung */
+  display: block;
+  /* Macht den <a>-Tag zu einem Block-Element */ }
 
 /*
    * footer
@@ -1065,7 +1141,7 @@ pre {
     transform: scale(1.3, 1.3); }
   .content a:not(.btn) {
     text-decoration: none;
-    background-image: linear-gradient(to top, transparent, transparent 0, currentColor 0, currentColor 1px, transparent 1px);
+    background-image: linear-gradient(to top, transparent, transparent 0, currentColor 0, currentColor 0px, transparent 0px);
     word-wrap: break-word; }
   .content a:focus,
   .content a:hover {

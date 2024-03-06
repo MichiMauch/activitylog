@@ -1,0 +1,8 @@
+[walking]
+other = "Spazieren"
+
+[cycling]
+other = "Radfahren"
+
+[hiking]
+other = "Wandern"
