@@ -1081,6 +1081,21 @@ pre {
   /* Macht den <a>-Tag zu einem Block-Element */ }
 
 /*
+   * map-section
+   * * ********/
+.map-section {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  gap: 20px; }
+
+.map-container {
+  height: 400px; }
+
+/* Optional: Zusätzliche Stile für die Info-Container, falls benötigt */
+.info-container {
+  /* Beispiel für mögliche Stile */ }
+
+/*
    * footer
    * * *******/
 .site-footer {

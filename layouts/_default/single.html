@@ -2,19 +2,51 @@
 
 {{ define "content" }}
 <article>
-    <header>
-        <h1>{{ .Title }}</h1>
-        <p><strong>Date:</strong> {{ .Date.Format "January 2, 2006" }}</p>
-        <p>{{ .Params.description }}</p>
-        <p><strong>Activity Type:</strong> {{ .Params.activity_type }}</p>
-        <p><strong>Country:</strong> {{ .Params.country }}</p>
-        <p><strong>State:</strong> {{ .Params.state }}</p>
-       
-        <!-- Fügen Sie hier weitere Front Matter-Attribute ein -->
+    <header>    
+            <p>
+                <blockquote></br>
+                <p><strong>{{ .Title }}:</strong> {{ .Params.description }}</p>
+                <p>{{ .Date.Format "02.01.2006" }} - 
+                {{ with .Params.village }}{{ . }}, {{ end }}
+                {{ with .Params.state }}{{ . }}, {{ end }}
+                {{ with .Params.country }}{{ i18n . }}{{ end }}</p>
+                <section class="map-section">
+                    <div id="mapid" class="map-container">Karteninhalt hier</div>
+                    <div class="info-container">
+                        <p> 
+                            <strong>Aktivität:</strong> {{ i18n .Params.activity_type }}<br>
+                            <strong>Start:</strong> {{ .Params.start_point_lat }} / {{ .Params.start_point_lon }}<br>
+                            <strong>Ziel:</strong> {{ .Params.end_point_lat }} / {{ .Params.end_point_lon }}<br>    
+                            <strong>Länge:</strong> {{ .Params.length_km }}km<br>
+                            <strong>Dauer:</strong> {{ .Params.duration }}<br>
+                            <strong>Bewegungszeit:</strong> {{ .Params.moving_time }}<br>
+                            {{ with .Params.start_time }}
+                                {{ if ge (len .) 20 }} <!-- Prüft, ob der String mindestens 20 Zeichen lang ist -->
+                                    <strong>Startzeit:</strong> {{ substr . 11 (sub (len .) 20) }}<br>
+                                {{ end }}
+                            {{ end }}                         
+                            {{ with .Params.end_time }}
+                                {{ if ge (len .) 20 }} <!-- Prüft, ob der String mindestens 20 Zeichen lang ist -->
+                                    <strong>Endzeit:</strong> {{ substr . 11 (sub (len .) 20) }}<br>
+                                {{ end }}
+                            {{ end }}                        
+                            <strong>Höhenmeter up:</strong> {{ .Params.total_ascent }}m<br>
+                            <strong>Höhenmeter down:</strong> {{ .Params.total_descent }}m<br>
+                        </p>
+                    </div>
+                </section>
+                
+                </blockquote>
+            </p>
+
     </header>
-    <div id="mapid" style="height: 400px;"></div>
-    <section>
-        {{ .Content }}
+    <section style="display: grid; grid-template-columns: 3fr 1fr; gap: 20px;">
+        <div id="mapid" style="height: 400px;">Karteninhalt hier</div>
+        <div>
+            <p><strong>Activity Type:</strong> {{ i18n .Params.activity_type }}</p>
+            <p><strong>Country:</strong> {{ i18n .Params.country }}</p>
+            <p><strong>State:</strong> {{ .Params.state }}</p>
+        </div>
     </section>
 
     <!-- Beispiel für die Ausgabe von benutzerdefinierten Front Matter-Attributen -->
