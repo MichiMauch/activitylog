@@ -21,8 +21,9 @@ end_point_lat: 47.33880
 end_point_lon: 8.05062
 elevation_start: 0.00
 elevation_end: 0.00
-difficulty: "Dies ist eine Mock-Beschreibung für Testzwecke."
-description: ""
+difficulty: "Bewertung: mittel."
+description: "Die Route 'Rütihof - Gränichen - Suhr - Entfelden' startet in Muhen, Schweiz. Die 18,34 km lange Strecke führt durch malerische Landschaften mit insgesamt 257 Metern Aufstieg und 252 Metern Abstieg. Mit einer Gesamtdauer von 1h 10min, inklusive Pausen, bietet die Tour eine angenehme Mischung aus Herausforderung und Genuss"
+coat_of_arms_url: "http://commons.wikimedia.org/wiki/Special:FilePath/Wappen%20Muhen%20AG.svg"
 teaser_image: ./images/teaser/ruetihof_graenichen_suhr_entfelden.png
 // trackpoints:
 ---

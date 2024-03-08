@@ -5,33 +5,40 @@
     <header>    
             <p>
                 <blockquote></br>
-                <p><strong>{{ .Title }}:</strong> {{ .Params.description }}</p>
-                <p>{{ .Date.Format "02.01.2006" }} - 
+                <p><strong>{{ .Date.Format "02.01.2006" }}.</strong> {{ .Params.description }}</p>
+                <p> 
                 {{ with .Params.village }}{{ . }}, {{ end }}
                 {{ with .Params.state }}{{ . }}, {{ end }}
                 {{ with .Params.country }}{{ i18n . }}{{ end }}</p>
                 <section class="map-section">
                     <div id="mapid" class="map-container">Karteninhalt hier</div>
                     <div class="info-container">
-                        <p> 
-                            <strong>Aktivität:</strong> {{ i18n .Params.activity_type }}<br>
-                            <strong>Start:</strong> {{ .Params.start_point_lat }} / {{ .Params.start_point_lon }}<br>
-                            <strong>Ziel:</strong> {{ .Params.end_point_lat }} / {{ .Params.end_point_lon }}<br>    
-                            <strong>Länge:</strong> {{ .Params.length_km }}km<br>
-                            <strong>Dauer:</strong> {{ .Params.duration }}<br>
-                            <strong>Bewegungszeit:</strong> {{ .Params.moving_time }}<br>
+                        <p> <strong>{{ .Title }}</strong><br>
+                            {{ if eq .Params.activity_type "hiking" }}
+                                <i class="fa-solid fa-person-hiking"></i> {{ i18n .Params.activity_type }}<br>
+                            {{ else if eq .Params.activity_type "walking" }}
+                                <i class="fa-solid fa-person-walking"></i> {{ i18n .Params.activity_type }}<br>
+                            {{ else if eq .Params.activity_type "cycling" }}
+                                <i class="fa-solid fa-person-biking"></i> {{ i18n .Params.activity_type }}<br>
+                            {{ end }}
                             {{ with .Params.start_time }}
-                                {{ if ge (len .) 20 }} <!-- Prüft, ob der String mindestens 20 Zeichen lang ist -->
-                                    <strong>Startzeit:</strong> {{ substr . 11 (sub (len .) 20) }}<br>
-                                {{ end }}
+                            {{ if ge (len .) 20 }} <!-- Prüft, ob der String mindestens 20 Zeichen lang ist -->
+                            <i class="fa-regular fa-circle-play"></i> {{ substr . 11 (sub (len .) 20) }} Uhr<br>
+                            {{ end }}
                             {{ end }}                         
                             {{ with .Params.end_time }}
-                                {{ if ge (len .) 20 }} <!-- Prüft, ob der String mindestens 20 Zeichen lang ist -->
-                                    <strong>Endzeit:</strong> {{ substr . 11 (sub (len .) 20) }}<br>
-                                {{ end }}
-                            {{ end }}                        
-                            <strong>Höhenmeter up:</strong> {{ .Params.total_ascent }}m<br>
-                            <strong>Höhenmeter down:</strong> {{ .Params.total_descent }}m<br>
+                            {{ if ge (len .) 20 }} <!-- Prüft, ob der String mindestens 20 Zeichen lang ist -->
+                            <i class="fa-regular fa-circle-stop"></i> {{ substr . 11 (sub (len .) 20) }} Uhr<br>
+                            {{ end }}
+                            {{ end }}
+                            <i class="fa-solid fa-hourglass-end sand-hourglass"></i> {{ .Params.duration }}<br>
+                            <i class="fa-solid fa-person-running"></i> {{ .Params.moving_time }}<br>                        
+                            <i class="fa-solid fa-location-dot"></i>{{ .Params.start_point_lat }} / {{ .Params.start_point_lon }}<br>
+                            <i class="fa-solid fa-map-pin"></i> {{ .Params.end_point_lat }} / {{ .Params.end_point_lon }}<br>    
+                            <i class="fa-solid fa-arrows-left-right"></i> {{ .Params.length_km }}km<br>
+                            <i class="fa-solid fa-arrow-up-long" style="transform: rotate(45deg);"></i> {{ .Params.total_ascent }}m<br>
+                            <i class="fa-solid fa-arrow-up-long" style="transform: rotate(135deg);"></i>{{ .Params.total_descent }}m<br>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Wappen_Muhen_AG.svg" width="32" height="32">
                         </p>
                     </div>
                 </section>
@@ -40,14 +47,6 @@
             </p>
 
     </header>
-    <section style="display: grid; grid-template-columns: 3fr 1fr; gap: 20px;">
-        <div id="mapid" style="height: 400px;">Karteninhalt hier</div>
-        <div>
-            <p><strong>Activity Type:</strong> {{ i18n .Params.activity_type }}</p>
-            <p><strong>Country:</strong> {{ i18n .Params.country }}</p>
-            <p><strong>State:</strong> {{ .Params.state }}</p>
-        </div>
-    </section>
 
     <!-- Beispiel für die Ausgabe von benutzerdefinierten Front Matter-Attributen -->
     <footer>

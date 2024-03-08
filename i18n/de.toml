@@ -1,11 +1,11 @@
 [walking]
-other = "Spazieren"
+other = "Spaziergang"
 
 [cycling]
-other = "Radfahren"
+other = "Biketour"
 
 [hiking]
-other = "Wandern"
+other = "Wanderung"
 
 ['Schweiz/Suisse/Svizzera/Svizra']
 other = "Schweiz"
