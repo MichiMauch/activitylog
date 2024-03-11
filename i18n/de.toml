@@ -7,5 +7,29 @@ other = "Biketour"
 [hiking]
 other = "Wanderung"
 
+[Snowshoe]
+other = "Schneeschuhtour"
+
 ['Schweiz/Suisse/Svizzera/Svizra']
 other = "Schweiz"
+
+[Monday]
+other = "Montag"
+
+[Tuesday]
+other = "Dienstag"
+
+[Wednesday]
+other = "Mittwoch"
+
+[Thursday]
+other = "Donnerstag"
+
+[Friday]
+other = "Freitag"
+
+[Saturday]
+other = "Samstag"
+
+[Sunday]
+other = "Sonntag"

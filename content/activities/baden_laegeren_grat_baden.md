@@ -4,7 +4,8 @@ title: "Baden - Lägeren Grat - Baden"
 draft: false
 type: activities
 date: "2024-02-10T10:14:18+01:00"
-country: "Schweiz/Suisse/Svizzera/Svizra"
+country: "Schweiz"
+country_code: "ch"
 state: "Aargau"
 village: "Baden"
 activity_type: "hiking"

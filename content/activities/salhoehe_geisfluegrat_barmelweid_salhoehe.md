@@ -4,9 +4,14 @@ title: "Salhöhe - Geisfluegrat - Barmelweid - Salhöhe"
 draft: false
 type: activities
 date: "2024-01-19T11:18:56+01:00"
-country: "Schweiz/Suisse/Svizzera/Svizra"
+country: "Schweiz"
+country_code: "ch"
 state: "Aargau"
 village: "Erlinsbach (AG)"
+endcountry: "Schweiz"
+endcountry_code: "ch"
+endstate: "Aargau"
+endvillage: "Erlinsbach (AG)"
 activity_type: "Snowshoe"
 length_km: 7.57
 duration: "2h 14min"
@@ -21,9 +26,10 @@ end_point_lat: 47.42829
 end_point_lon: 7.98815
 elevation_start: 0.00
 elevation_end: 0.00
-difficulty: "Bewertung: leicht."
-description: "Erleben Sie eine herrliche Snowshoe-Tour durch die malerische Landschaft von Erlinsbach (AG), Schweiz/Suisse/Svizzera/Svizra. Die Route "Salhöhe - Geisfluegrat - Barmelweid - Salhöhe" erstreckt sich über 7,57 km und bietet einen Gesamtaufstieg von 334 Metern sowie einen Gesamtabstieg von 326 Metern. Genießen Sie atemberaubende Ausblicke und eine angenehme Strecke mit einer Gesamtdauer von 2 Stunden und 14 Minuten, einschließlich Pausen"
+difficulty: "Dies ist eine Mock-Beschreibung für Testzwecke."
+description: ""
 coat_of_arms_url: "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Erlinsbach%20AG.svg"
 teaser_image: ./images/teaser/salhoehe_geisfluegrat_barmelweid_salhoehe.png
+gpx_download: ./gpx/salhoehe_geisfluegrat_barmelweid_salhoehe.gpx
 // trackpoints:
 ---

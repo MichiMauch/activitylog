@@ -298,27 +298,80 @@
 
   .map-container {
     height: 400px;
+    grid-template-columns: 1fr;
     border: #111 1px solid;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25), 0px 12px 24px rgba(0, 0, 0, 0.22);
     border-radius: 10px; /* Dieser Wert ist anpassbar */
-
-    
   }
-
-  @media (max-width: 768px) {
-    .map-section {
-        grid-template-columns: 1fr; /* Eine Spalte für kleinere Bildschirme */
-    }
-}
 
   /* Optional: Zusätzliche Stile für die Info-Container, falls benötigt */
   .info-container {
     border: #111 1px solid;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25), 0px 12px 24px rgba(0, 0, 0, 0.22);
     border-radius: 10px; /* Dieser Wert ist anpassbar */
-
   }
 
+  @media (max-width: 768px) {
+    .map-section {
+        grid-template-columns: 1fr; /* Eine Spalte für kleinere Bildschirme */
+    }
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 8 zu 4 Verhältnis */
+    grid-gap: 20px;
+  }
+
+  .grid-item {
+    //background: #e0e0e0;
+    padding: 20px;
+    border: #111 1px solid;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25), 0px 12px 24px rgba(0, 0, 0, 0.22);
+    border-radius: 10px; /* Dieser Wert ist anpassbar */
+    background-color: hsl(40, 100%, 90%);
+    
+  }
+
+  .full-width {
+    grid-column: 1 / -1; /* Voller Breite */
+    border: #111 1px solid;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25), 0px 12px 24px rgba(0, 0, 0, 0.22);
+    border-radius: 10px; /* Dieser Wert ist anpassbar */
+  }
+
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* Staple Spalten untereinander auf mobilen Geräten */
+    }
+  }
+
+  .icon-text-container {
+    display: grid;
+    //grid-template-columns: min-content 1fr; /* Stellt sicher, dass das Icon genug Platz hat, und der Text den Rest der Zeile einnimmt */
+    grid-template-columns: 30px auto; /* Die erste Spalte hat eine feste Breite von 30px */
+    gap: 10px; /* Abstand zwischen Icon und Text */
+    align-items: center; /* Zentriert die Inhalte vertikal in ihren Zellen */
+    padding: 10px 0 10px 0;
+    border-bottom: #111 1px solid;
+  }
+
+  .icon-pair {
+    width: 30px; /* Setzt eine feste Breite für das Icon-Div */
+    text-align: center; /* Zentriert das Icon innerhalb des Div */
+    font-size: 1.25rem;
+}
+  
+  .text-pair {
+    padding-left: 20px; /* Optionaler Abstand zum Icon */
+    font-family: var(--font);
+    font-weight: 400;
+    font-size: 1.25rem;
+    // border: #111 1px solid;
+  }
+/*
+   * descriptionbox
+   * * *******/
+  
 
 /*
    * icons animation

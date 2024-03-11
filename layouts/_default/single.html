@@ -4,45 +4,94 @@
 <article>
     <header>    
             <p>
-                <blockquote></br>
-                <p><strong>{{ .Date.Format "02.01.2006" }}.</strong> {{ .Params.description }}</p>
-                <p> 
-                {{ with .Params.village }}{{ . }}, {{ end }}
-                {{ with .Params.state }}{{ . }}, {{ end }}
-                {{ with .Params.country }}{{ i18n . }}{{ end }}</p>
-                <section class="map-section">
-                    <div id="mapid" class="map-container">Karteninhalt hier</div>
-                    <div class="info-container">
-                        <p> <strong>{{ .Title }}</strong><br>
+                <blockquote>
+                    <div class="grid-container">
+                        <div class="grid-item full-width">
+                            <p>
+                                <strong>{{ i18n .Params.activity_type }}</strong> gestartet am
+                                {{ i18n (printf "%s" (.Date.Format "Monday")) }},
+                                <strong>{{ .Date.Format "02.01.2006" }}</strong> um
+                                {{ with .Params.start_time }}
+                                {{ if ge (len .) 20 }} <!-- Prüft, ob der String mindestens 20 Zeichen lang ist -->
+                                {{ substr . 11 (sub (len .) 20) }} Uhr
+                                {{ end }}
+                                {{ end }} in  
+                                {{ with .Params.village }}{{ . }}, {{ end }}
+                                {{ with .Params.state }}{{ . }}, {{ end }}
+                                {{ with .Params.country }}{{ i18n . }}{{ end }}.</p>
+                        </div>
+                        <div class="grid-item">
+                            <p>{{ .Params.description }}</p>
+                        </div>
+                        <div class="grid-item"><p>
                             {{ if eq .Params.activity_type "hiking" }}
-                                <i class="fa-solid fa-person-hiking"></i> {{ i18n .Params.activity_type }}<br>
+                            <div class="icon-text-container">
+                                <div class="icon-pair"><i class="fa-solid fa-person-hiking"></i></div>
+                                <div class="text-pair"><strong>{{ i18n .Params.activity_type }}</strong></div>
+                            </div>
                             {{ else if eq .Params.activity_type "walking" }}
-                                <i class="fa-solid fa-person-walking"></i> {{ i18n .Params.activity_type }}<br>
+                            <div class="icon-text-container">
+                                <div class="icon-pair"><i class="fa-solid fa-person-walking"></i></div>
+                                <div class="text-pair"><strong>{{ i18n .Params.activity_type }}</strong></div>
+                            </div>
+                            {{ else if eq .Params.activity_type "Snowshoe" }}
+                            <div class="icon-text-container">
+                                <div class="icon-pair"><i class="fa-solid fa-person-skiing-nordic"></i></div>
+                                <div class="text-pair"><strong><strong>{{ i18n .Params.activity_type }}</strong></strong></div>
+                            </div>
                             {{ else if eq .Params.activity_type "cycling" }}
-                                <i class="fa-solid fa-person-biking"></i> {{ i18n .Params.activity_type }}<br>
+                            <div class="icon-text-container">
+                                <div class="icon-pair"><i class="fa-solid fa-person-biking"></i></div>
+                                <div class="text-pair"><strong><strong>{{ i18n .Params.activity_type }}</strong></div>
+                            </div>
                             {{ end }}
-                            {{ with .Params.start_time }}
-                            {{ if ge (len .) 20 }} <!-- Prüft, ob der String mindestens 20 Zeichen lang ist -->
-                            <i class="fa-regular fa-circle-play"></i> {{ substr . 11 (sub (len .) 20) }} Uhr<br>
-                            {{ end }}
-                            {{ end }}                         
-                            {{ with .Params.end_time }}
-                            {{ if ge (len .) 20 }} <!-- Prüft, ob der String mindestens 20 Zeichen lang ist -->
-                            <i class="fa-regular fa-circle-stop"></i> {{ substr . 11 (sub (len .) 20) }} Uhr<br>
-                            {{ end }}
-                            {{ end }}
-                            <i class="fa-solid fa-hourglass-end sand-hourglass"></i> {{ .Params.duration }}<br>
-                            <i class="fa-solid fa-person-running"></i> {{ .Params.moving_time }}<br>                        
-                            <i class="fa-solid fa-location-dot"></i>{{ .Params.start_point_lat }} / {{ .Params.start_point_lon }}<br>
-                            <i class="fa-solid fa-map-pin"></i> {{ .Params.end_point_lat }} / {{ .Params.end_point_lon }}<br>    
-                            <i class="fa-solid fa-arrows-left-right"></i> {{ .Params.length_km }}km<br>
-                            <i class="fa-solid fa-arrow-up-long" style="transform: rotate(45deg);"></i> {{ .Params.total_ascent }}m<br>
-                            <i class="fa-solid fa-arrow-up-long" style="transform: rotate(135deg);"></i>{{ .Params.total_descent }}m<br>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Wappen_Muhen_AG.svg" width="32" height="32">
-                        </p>
-                    </div>
+                            <div class="icon-text-container">
+                                <div class="icon-pair"><i class="fa-solid fa-person-running"></i></div>
+                                <div class="text-pair"><strong>{{ .Params.moving_time }}</div></strong>
+                            </div> 
+                            <div class="icon-text-container">
+                                <div class="icon-pair"><i class="fa-solid fa-arrows-left-right"></i></div>
+                                <div class="text-pair"><strong>{{ .Params.length_km }}km</div></strong>
+                            </div>                              
+                            <div class="icon-text-container">
+                                <div class="icon-pair"><i class="fa-solid fa-arrow-up-long" style="transform: rotate(45deg);"></i></div>
+                                <div class="text-pair"><strong>{{ .Params.total_ascent }}m</div></strong>
+                            </div>                              
+                            <div class="icon-text-container">
+                                <div class="icon-pair"><i class="fa-solid fa-arrow-up-long" style="transform: rotate(135deg);"></i></div>
+                                <div class="text-pair"><strong>{{ .Params.total_descent }}m</div></strong>
+                            </div>                              
+                         
+                        </div>
+                        <div id="mapid" style="height: 400px;" class="grid-item full-width">Volle Breite (12)</div>
+                    </div>    
+                <section class="map-section">
                 </section>
-                
+                <p>
+
+                    {{ with .Params.village }}{{ . }}, {{ end }}
+                    {{ with .Params.state }}{{ . }}, {{ end }}
+                    {{ with .Params.country }}{{ i18n . }}{{ end }}<br>
+                    <i class="fa-solid fa-hourglass-end sand-hourglass"></i> {{ .Params.duration }}<br>
+                    {{ with .Params.start_time }}
+                    {{ if ge (len .) 20 }} <!-- Prüft, ob der String mindestens 20 Zeichen lang ist -->
+                    <i class="fa-regular fa-circle-play"></i> {{ substr . 11 (sub (len .) 20) }} Uhr<br>
+                    {{ end }}
+                    {{ end }}                         
+                    {{ with .Params.end_time }}
+                    {{ if ge (len .) 20 }} <!-- Prüft, ob der String mindestens 20 Zeichen lang ist -->
+                    <i class="fa-regular fa-circle-stop"></i> {{ substr . 11 (sub (len .) 20) }} Uhr<br>
+                    {{ end }}
+                    {{ end }}
+                    <i class="fa-solid fa-location-dot"></i>{{ .Params.start_point_lat }} / {{ .Params.start_point_lon }}<br>
+                    <i class="fa-solid fa-map-pin"></i> {{ .Params.end_point_lat }} / {{ .Params.end_point_lon }}<br>    
+</p>                <img width="200px" src="{{ .Params.coat_of_arms_url }}">
+                    <img width="200px" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Wappen_{{ .Params.state }}_matt.svg">
+                    <img width="200px" src="https://flagcdn.com/{{ .Params.country_code }}.svg">
+                    <img width="200px" src="{{ .Params.endcoat_of_arms_url }}">
+                    <img width="200px" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Wappen_{{ .Params.endstate }}_matt.svg">
+                    <img width="200px" src="https://flagcdn.com/{{ .Params.endcountry_code }}.svg">
+        <p><strong>Weather Conditions:</strong> {{ .Params.weather_conditions }}</p>
                 </blockquote>
             </p>
 

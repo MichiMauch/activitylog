@@ -1,6 +1,7 @@
 {
     "name": "Baden - Lägeren Grat - Baden",
-    "country": "Schweiz/Suisse/Svizzera/Svizra",
+    "country": "Schweiz",
+    "country_code": "ch",
     "state": "Aargau",
     "village": "Baden",
     "activity_type": "hiking",
