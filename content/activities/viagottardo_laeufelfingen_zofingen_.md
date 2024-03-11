@@ -30,6 +30,6 @@ difficulty: "Bewertung: mittel."
 description: "Erkunden Sie die ViaGottardo-Route von Läufelfingen nach Zofingen in der Schweiz. Die 23,87 km lange Wanderung mit 585 m Aufstieg und 715 m Abstieg bietet malerische Landschaften und eine Dauer von 4h 51min"
 coat_of_arms_url: "http://commons.wikimedia.org/wiki/Special:FilePath/Wappen%20Laeufelfingen.png"
 endcoat_of_arms_url: "http://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Zofingen.svg"
-teaser_image: /images/teaser/viagottardo_laeufelfingen_zofingen_.png
-gpx_download: /gpx/viagottardo_laeufelfingen_zofingen_.gpx
+teaser_image: ./images/teaser/viagottardo_laeufelfingen_zofingen_.png
+gpx_download: ./gpx/viagottardo_laeufelfingen_zofingen_.gpx
 ---
