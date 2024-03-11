@@ -27,7 +27,7 @@ end_point_lon: 8.05062
 elevation_start: 0.00
 elevation_end: 0.00
 difficulty: "Bewertung: mittel."
-description: "Erkunden Sie die atemberaubende Fahrradstrecke 'Oftringen - Olten - Aarau' von Muhen aus. Die 45,87 km lange Route führt durch malerische Landschaften mit insgesamt 263 m Auf- und 258 m Abstieg. Genießen Sie die Fahrt in 2h 28min, einschließlich Pausen"
+description: "Erkunden Sie die atemberaubende Fahrradstrecke Oftringen - Olten - Aarau von Muhen aus. Die 45,87 km lange Route führt durch malerische Landschaften mit insgesamt 263 m Auf- und 258 m Abstieg. Genießen Sie die Fahrt in 2h 28min, einschließlich Pausen"
 coat_of_arms_url: "http://commons.wikimedia.org/wiki/Special:FilePath/Wappen%20Muhen%20AG.svg"
 endcoat_of_arms_url: "http://commons.wikimedia.org/wiki/Special:FilePath/Wappen%20Muhen%20AG.svg"
 teaser_image: /images/teaser/oftringen_olten_aarau.png
