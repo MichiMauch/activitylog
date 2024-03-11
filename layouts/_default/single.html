@@ -86,10 +86,10 @@
                     <i class="fa-solid fa-location-dot"></i>{{ .Params.start_point_lat }} / {{ .Params.start_point_lon }}<br>
                     <i class="fa-solid fa-map-pin"></i> {{ .Params.end_point_lat }} / {{ .Params.end_point_lon }}<br>    
 </p>                <img width="200px" src="{{ .Params.coat_of_arms_url }}">
-                    <img width="200px" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Wappen_{{ .Params.state }}_matt.svg">
+                    <img width="200px" src="./cantons/{{ .Params.state }}.svg">
                     <img width="200px" src="https://flagcdn.com/{{ .Params.country_code }}.svg">
                     <img width="200px" src="{{ .Params.endcoat_of_arms_url }}">
-                    <img width="200px" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Wappen_{{ .Params.endstate }}_matt.svg">
+                    <img width="200px" src="./cantons/{{ .Params.endstate }}.svg">
                     <img width="200px" src="https://flagcdn.com/{{ .Params.endcountry_code }}.svg">
         <p><strong>Weather Conditions:</strong> {{ .Params.weather_conditions }}</p>
                 </blockquote>

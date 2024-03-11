@@ -13,6 +13,9 @@ other = "Schneeschuhtour"
 ['Schweiz/Suisse/Svizzera/Svizra']
 other = "Schweiz"
 
+[Schweiz]
+other = "Schweiz"
+
 [Monday]
 other = "Montag"
 
