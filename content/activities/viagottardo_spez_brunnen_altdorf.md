@@ -26,10 +26,10 @@ end_point_lat: 46.87622
 end_point_lon: 8.63184
 elevation_start: 0.00
 elevation_end: 0.00
-difficulty: "Bewertig: mittel."
-description: "D Wanderroute ViaGottardo Spez: Brunnen - Altdorf führt übere 21.10 km von Brunnen aus durch d'Schweizer Idylle. Unterwegs erwarted di en Aufstieg vo 985 Meter und en Abstieg vo 708 Meter. D Ganztour dauert rund 4 Stund 25 Minute inkl. Pausen"
+difficulty: "Bewertung: mittel."
+description: "Erkunde die beeindruckende ViaGottardo Spez: Brunnen - Altdorf Route in der malerischen Schweiz. Die 21.10 km lange Wanderung führt dich durch atemberaubende Landschaften mit einem Gesamtaufstieg von 985 Metern und einem Gesamtabstieg von 708 Metern. Genieße die perfekte Mischung aus Natur und Kultur auf dieser 4h 25min langen Strecke, die in Brunnen beginnt"
 coat_of_arms_url: ""
 endcoat_of_arms_url: "http://commons.wikimedia.org/wiki/Special:FilePath/Altdorf-coat%20of%20arms.svg"
-teaser_image: ./images/teaser/viagottardo_spez_brunnen_altdorf.png
-gpx_download: ./gpx/viagottardo_spez_brunnen_altdorf.gpx
+teaser_image: /images/teaser/viagottardo_spez_brunnen_altdorf.png
+gpx_download: /gpx/viagottardo_spez_brunnen_altdorf.gpx
 ---

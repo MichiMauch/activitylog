@@ -1160,9 +1160,60 @@ pre {
   font-weight: 400;
   font-size: 1.25rem; }
 
+.grid-item.full-width {
+  display: grid;
+  /* Macht dieses div zu einem Grid-Container */
+  grid-template-columns: 1fr;
+  /* Eine Spalte, die die gesamte Breite einnimmt */ }
+
+@media (max-width: 768px) {
+  .grid-item.full-width {
+    grid-template-columns: 1fr;
+    /* Staple Spalten untereinander auf mobilen Geräten */ } }
+
+.nested-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Definiert zwei Spalten innerhalb des verschachtelten Grids */
+  gap: 10px;
+  /* Optional: Fügt einen Abstand zwischen den verschachtelten Spalten hinzu */ }
+
+.nested-item {
+  /* Stile für die verschachtelten Items. Anpassen nach Bedarf */ }
+
 /*
-   * descriptionbox
+   * downoadbutton
    * * *******/
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  /* Zentriert den Button-Text vertikal */
+  justify-content: center;
+  /* Zentriert den Button-Text horizontal */
+  padding: 10px 80px;
+  color: #fff;
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  text-decoration: none;
+  /* Entfernt die Unterstreichung */
+  font-family: Arial, sans-serif;
+  font-size: 16px; }
+
+.download-button:visited {
+  color: #fff;
+  /* Setzt die Textfarbe besuchter Links auf Weiß */ }
+
+.download-button:hover {
+  background-color: #D1265B; }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  /* Zentriert den Inhalt horizontal */
+  align-items: center;
+  /* Zentriert den Inhalt vertikal */
+  padding-top: 20px; }
+
 /*
    * icons animation
    * * *******/
