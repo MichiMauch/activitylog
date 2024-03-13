@@ -4,6 +4,7 @@ title: "Oftringen - Olten - Aarau"
 draft: false
 type: activities
 date: "2024-02-16T11:53:19+01:00"
+dateGroup: "Februar 2024"
 country: "Schweiz"
 country_code: "ch"
 state: "Aargau"
@@ -30,6 +31,6 @@ difficulty: "Bewertung: mittel."
 description: "Erkunden Sie die atemberaubende Fahrradstrecke Oftringen - Olten - Aarau von Muhen aus. Die 45,87 km lange Route führt durch malerische Landschaften mit insgesamt 263 m Auf- und 258 m Abstieg. Genießen Sie die Fahrt in 2h 28min, einschließlich Pausen"
 coat_of_arms_url: "http://commons.wikimedia.org/wiki/Special:FilePath/Wappen%20Muhen%20AG.svg"
 endcoat_of_arms_url: "http://commons.wikimedia.org/wiki/Special:FilePath/Wappen%20Muhen%20AG.svg"
-teaser_image: ./images/teaser/oftringen_olten_aarau.png
+teaser_image: images/teaser/oftringen_olten_aarau.png
 gpx_download: /gpx/oftringen_olten_aarau.gpx
 ---

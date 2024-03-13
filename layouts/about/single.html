@@ -1,0 +1,11 @@
+{{ define "body_classes" }}single{{ end }}
+
+{{- define "content" }}
+  {{ .Content }}
+{{- end }}
+
+{{- define "comments" }}
+  {{- if ne .Site.Params.disqus "xxxxxxx" }}
+    {{- partial "disqus" . }}
+  {{- end }}
+{{- end }}

@@ -1,7 +1,7 @@
 baseURL = 'http://localhost:1313/activitylog'
 defaultContentLanguage = 'de'
 title = 'Trekko'
-paginate = 7
+paginate = 9
 mainSections = "activities"
 
 
@@ -31,18 +31,19 @@ canonifyURLs = true
   mainSections = ["post"]
   disqus = "xxxxxxx"
   defaultImage = "https://michimauch.github.io/activitylog/headerimage.webp"
+  matomoSiteID = "IHRE_MATOMO_SITE_ID"
 
   [params.meta_tags]
-    meta_description = "Ava is a light theme for your blog with essential features you might dig in."
+    meta_description = "Trekko - Unser Outdoor Journal."
     meta_og_title = "Trekko"
     meta_og_sitename = "Trekko"
     meta_og_type = "website"
-    meta_og_url = "https://jmau111.github.io/hugo-theme-ava-demo"
-    meta_og_image = "https://raw.githubusercontent.com/jmau111/hugo-theme-ava/main/images/default.jpeg"
-    meta_og_description = "Ava is a light theme for your blog with essential features you might dig in."
+    meta_og_url = "https://michimauch.github.io/activitylog/"
+    meta_og_image = "https://michimauch.github.io/activitylog/headerimage.webp"
+    meta_og_description = "Trekko - Unser Outdoor Journal."
     meta_twitter_card = "summary"
-    meta_twitter_site = "@gohugoio"
-    meta_twitter_creator = "@gohugoio"
+    meta_twitter_site = "@michimauch"
+    meta_twitter_creator = "@michimauch"
     
  [params.humans_txt]
     dev_team = ""
@@ -75,19 +76,14 @@ canonifyURLs = true
     weight = 1
 
 [[menu.main]]
-    name = "About"
-    url = "/about/"
+    name = "Alle Aktivitäten"
+    url = "/activities/"
     weight = 2
 
 [[menu.main]]
-    name = "Archives"
-    url = "/posts/"
+    name = "Über Trekko"
+    url = "/about/"
     weight = 3
-
-[[menu.main]]
-    name = "Contact"
-    url = "/contact/"
-    weight = 4
 
 [permalinks]
   posts = "/:year/:month/:day/:slug/"

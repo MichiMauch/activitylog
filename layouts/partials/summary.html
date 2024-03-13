@@ -1,6 +1,6 @@
 <a href="{{ .Permalink }}" class="card-link">
   <div class="card">
-    <div class="Box" style="background-image: url('{{ .Params.teaser_image }}');">
+    <div class="Box" style="background-image: url('{{ .Params.teaser_image | absURL }}');">
       <div class="link-overlay">
         <strong>{{ .Title }}</strong>
       </div>

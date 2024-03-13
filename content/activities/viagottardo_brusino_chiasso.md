@@ -4,6 +4,7 @@ title: "ViaGottardo: Brusino - Chiasso"
 draft: false
 type: activities
 date: "2023-03-10T09:17:55+01:00"
+dateGroup: "März 2023"
 country: "Schweiz"
 country_code: "ch"
 state: "Ticino"

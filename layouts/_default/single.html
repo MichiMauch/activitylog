@@ -1,5 +1,8 @@
 {{ define "body_classes" }}page{{ end }}
-
+{{- define "subheader" }}
+  {{ $date := partial "date.html" . }}
+  {{ partial "subheader.html" (dict "context" . "date" $date "site" $.Site) }}
+{{- end }}
 {{ define "content" }}
 <article>
     <header>    

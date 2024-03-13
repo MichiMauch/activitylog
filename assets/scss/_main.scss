@@ -188,7 +188,7 @@
   .container
   {
     max-width: 1000px;
-    margin: 100px auto;
+    margin: 1px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -277,7 +277,7 @@
     background: rgba(255, 255, 255, 0.5); /* Weiß mit Transparenz */
     padding: 10px 5px; /* 10px oben und unten, 5px links und rechts */
     box-sizing: border-box;
-    color: #fff;
+    color: var(--accent-color);
   }
 
   
@@ -379,6 +379,17 @@
     grid-template-columns: 1fr; /* Staple Spalten untereinander auf mobilen Geräten */
   }
 }
+
+.box-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Erstellt drei Spalten */
+  gap: 20px; /* Abstand zwischen den Boxen */
+}
+
+.activity-overview { /* Stellen Sie sicher, dass dies dem Klassennamen Ihrer Boxen entspricht */
+  /* Weitere Styles für Ihre Boxen */
+}
+
 
 .nested-grid {
     display: grid;
