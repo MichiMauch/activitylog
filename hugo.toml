@@ -31,7 +31,7 @@ canonifyURLs = true
   mainSections = ["post"]
   disqus = "xxxxxxx"
   defaultImage = "https://michimauch.github.io/activitylog/headerimage.webp"
-  matomoSiteID = "IHRE_MATOMO_SITE_ID"
+  matomoSiteID = "7"
 
   [params.meta_tags]
     meta_description = "Trekko - Unser Outdoor Journal."
