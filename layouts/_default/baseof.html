@@ -77,7 +77,7 @@
     {{- end }}
 
     {{ partialCached "google-analytics.html" . }}
-    {{ partial "matomo.html" . }}
+    {{ partialCached "matomo.html" . }}
 
   </body>
 </html>
