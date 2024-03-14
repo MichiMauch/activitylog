@@ -9,7 +9,7 @@ date: 2021-08-01T11:11:11+01:00
 
 # Was ist Trekko?
 
-**Trekko ist unser privates Outdoor Journal. Die Aktivitäten-Seiten werden aus den Daten eines GPX Files erstellt. Und ja, natürlich verwendet man für solche Sachen Tools wie Strav oder ähnliche ;-)**
+**Trekko ist unser privates Outdoor Journal. Die Aktivitäten-Seiten werden aus den Daten der GPX Files erstellt, welche wir bei den Aktivitäten aufgenommen haben. Und ja, natürlich verwendet man für solche Sachen Tools wie Strav oder ähnliche ;-)**
 
 ## Wie ist Trekko entstanden?
 
@@ -43,7 +43,7 @@ In naher Zukunft möchte ich noch verschiedene Statistiken rund um die Aktivitä
 
 # What is Trekko?
 
-**Trekko is our private outdoor journal. The activities pages are created from the data of a GPX file. And yes, of course, tools like Strava or similar are used for such things ;-)**
+**Trekko is our private outdoor journal. The activities pages are created from the data of the GPX files, which we recoreded on the tours. And yes, of course, tools like Strava or similar are used for such things ;-)**
 
 ## How was Trekko created?
 
