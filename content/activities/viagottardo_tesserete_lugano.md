@@ -4,7 +4,6 @@ title: "ViaGottardo: Tesserete - Lugano"
 draft: false
 type: activities
 date: "2022-01-14T10:33:26+01:00"
-dateGroup: "Januar 2022"
 country: "Schweiz"
 country_code: "ch"
 state: "Ticino"

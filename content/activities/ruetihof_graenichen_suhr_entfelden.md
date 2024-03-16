@@ -4,7 +4,6 @@ title: "Rütihof - Gränichen - Suhr - Entfelden"
 draft: false
 type: activities
 date: "2024-02-15T16:33:08+01:00"
-dateGroup: "Februar 2024"
 country: "Schweiz"
 country_code: "ch"
 state: "Aargau"

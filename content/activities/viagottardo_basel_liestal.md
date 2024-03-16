@@ -4,7 +4,6 @@ title: "ViaGottardo: Basel - Liestal"
 draft: false
 type: activities
 date: "2021-09-17T08:51:25+02:00"
-dateGroup: "September 2021"
 country: "Schweiz"
 country_code: "ch"
 state: "Basel-Stadt"

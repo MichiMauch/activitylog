@@ -4,7 +4,6 @@ title: "ViaGottardo: Sursee - Luzern"
 draft: false
 type: activities
 date: "2021-11-19T08:18:45+01:00"
-dateGroup: "November 2021"
 country: "Schweiz"
 country_code: "ch"
 state: "Luzern"

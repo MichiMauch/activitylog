@@ -4,7 +4,6 @@ title: "ViaGottardo: Weggis - Brunnen"
 draft: false
 type: activities
 date: "2023-04-14T09:53:47+02:00"
-dateGroup: "April 2023"
 country: "Schweiz"
 country_code: "ch"
 state: "Luzern"
