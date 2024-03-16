@@ -1,0 +1,15 @@
+{{ define "content" }}
+<div class="container">
+  {{ $activities := where .Site.RegularPages "Section" "activities" }}
+  {{ $taggedPages := where $activities ".Params.tag" "ViaGottardo" }}
+  {{ $groupedPages := $taggedPages.GroupByDate "2006-01" "desc" }}
+  {{ range $groupedPages }}
+    <h2>{{ i18n .Key }}</h2> <!-- Direkte Anzeige des Gruppierungsschlüssels -->
+    <div class="box-wrapper">
+      {{ range .Pages }}
+        {{ partial "activity-overview" . }}
+      {{ end }}
+    </div>
+  {{ end }}
+</div>
+{{- end }}

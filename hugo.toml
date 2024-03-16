@@ -81,9 +81,14 @@ canonifyURLs = true
     weight = 2
 
 [[menu.main]]
+    name = "ViaGottardo"
+    url = "/viagottardo/"
+    weight = 3    
+
+[[menu.main]]
     name = "Über Trekko"
     url = "/about/"
-    weight = 3
+    weight = 4
 
 [permalinks]
   posts = "/:year/:month/:day/:slug/"
