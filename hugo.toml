@@ -4,6 +4,8 @@ title = 'Trekko'
 paginate = 9
 mainSections = "activities"
 
+[taxonomies]
+  tag = "tags"
 
 [outputs]
   home = ["HTML", "humanstxt"]
@@ -82,7 +84,7 @@ canonifyURLs = true
 
 [[menu.main]]
     name = "ViaGottardo"
-    url = "/viagottardo/"
+    url = "/tags/viagottardo/"
     weight = 3    
 
 [[menu.main]]

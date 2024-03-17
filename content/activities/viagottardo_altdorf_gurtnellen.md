@@ -4,7 +4,7 @@ title: "ViaGottardo: Altdorf - Gurtnellen"
 draft: false
 type: activities
 date: "2024-03-15T09:14:49+01:00"
-tag: "ViaGottardo"
+tags: ["ViaGottardo"]
 country: "Schweiz"
 country_code: "ch"
 state: "Uri"
