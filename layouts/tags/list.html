@@ -25,12 +25,24 @@
   
       // Pfade zu den JSON-Dateien
       var jsonPaths = [
-        '{{ .Site.BaseURL }}/map-json/viagottardo_altdorf_gurtnellen.json',
+        '{{ .Site.BaseURL }}/map-json/viagottardo_basel_liestal.json',       
+        '{{ .Site.BaseURL }}/map-json/viagottardo_liestal_laeufelfingen.json',
+        '{{ .Site.BaseURL }}/map-json/viagottardo_laeufelfingen_zofingen_.json',
+        '{{ .Site.BaseURL }}/map-json/viagottardo_zofingen_sursee.json',
+        '{{ .Site.BaseURL }}/map-json/viagottardo_sursee_luzern.json',       
+        '{{ .Site.BaseURL }}/map-json/viagottardo_spez_luzern_weggis.json',
+        '{{ .Site.BaseURL }}/map-json/viagottardo_weggis_brunnen.json',
         '{{ .Site.BaseURL }}/map-json/viagottardo_spez_brunnen_altdorf.json',
+        '{{ .Site.BaseURL }}/map-json/viagottardo_altdorf_gurtnellen.json',       
+        '{{ .Site.BaseURL }}/map-json/viagottardo_altdorf_gurtnellen.json',
+        '{{ .Site.BaseURL }}/map-json/viagottardo_bellinzona_tesserete.json',
+        '{{ .Site.BaseURL }}/map-json/viagottardo_tesserete_lugano.json',
+        '{{ .Site.BaseURL }}/map-json/viagottardo_san_salvatore_morcote.json',
+        '{{ .Site.BaseURL }}/map-json/viagottardo_brusino_chiasso.json',
         // Füge weitere Pfade hinzu, wie benötigt
       ];
   
-      var colors = ['red', 'blue']; // Farben für die verschiedenen Routen
+      var colors = ['red', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue' ]; // Farben für die verschiedenen Routen
   
       jsonPaths.forEach((jsonPath, index) => {
         fetch(jsonPath)
