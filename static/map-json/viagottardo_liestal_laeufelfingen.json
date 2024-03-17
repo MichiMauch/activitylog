@@ -1,0 +1,31 @@
+{
+    "name": "ViaGottardo: Liestal - Läufelfingen",
+    "tag": "",
+    "country": "Schweiz",
+    "country_code": "ch",
+    "state": "Basel-Landschaft",
+    "village": "Liestal",
+    "endcountry": "Schweiz",
+    "endcountry_code": "ch",
+    "endstate": "Basel-Landschaft",
+    "endvillage": "Läufelfingen",
+    "activity_type": "",
+    "length_km": 0,
+    "duration": "0h 0min",
+    "moving_time": "0h 0min",
+    "total_ascent": 690,
+    "total_descent": 461,
+    "start_time": "0001-01-01T00:53:28+00:53",
+    "end_time": "0001-01-01T00:53:28+00:53",
+    "start_point": {
+        "latitude": 47.48425178,
+        "longitude": 7.732263948,
+        "elevation": 0
+    },
+    "end_point": {
+        "latitude": 47.39254908,
+        "longitude": 7.856322842,
+        "elevation": 0
+    },
+    "points": null
+}
