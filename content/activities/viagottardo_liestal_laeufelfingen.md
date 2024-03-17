@@ -3,7 +3,7 @@ slug: "viagottardo_liestal_laeufelfingen"
 title: "ViaGottardo: Liestal - Läufelfingen"
 draft: false
 type: activities
-date: "2018-10-08T09:00:00+01:00"
+date: "2021-10-08T09:00:00+01:00"
 tags: ["ViaGottardo"]
 country: "Schweiz"
 country_code: "ch"
@@ -19,8 +19,8 @@ duration: "4h 15min"
 moving_time: "3h 50min"
 total_ascent: 690
 total_descent: 461
-date: "2018-10-08T09:00:00+01:00"
-date: "2018-10-08T12:50:00+01:00"
+date: "2021-10-08T09:00:00+01:00"
+date: "2021-10-08T12:50:00+01:00"
 start_point_lat: 47.48425
 start_point_lon: 7.73226
 end_point_lat: 47.39255
