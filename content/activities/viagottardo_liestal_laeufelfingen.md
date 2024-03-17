@@ -15,12 +15,12 @@ endstate: "Basel-Landschaft"
 endvillage: "Läufelfingen"
 activity_type: "hiking"
 length_km: 20.5
-duration: "4h 15min"
+duration: "3h 50min"
 moving_time: "3h 50min"
 total_ascent: 690
 total_descent: 461
-date: "2021-10-08T09:00:00+01:00"
-date: "2021-10-08T12:50:00+01:00"
+start_time: "2021-10-08T09:00:00+01:00"
+end_time: "2021-10-08T12:50:00+01:00"
 start_point_lat: 47.48425
 start_point_lon: 7.73226
 end_point_lat: 47.39255

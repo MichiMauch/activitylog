@@ -10,13 +10,13 @@
     "endstate": "Basel-Landschaft",
     "endvillage": "Läufelfingen",
     "activity_type": "",
-    "length_km": 0,
+    "length_km": 20.5,
     "duration": "0h 0min",
     "moving_time": "0h 0min",
     "total_ascent": 690,
     "total_descent": 461,
-    "start_time": "0001-01-01T00:53:28+00:53",
-    "end_time": "0001-01-01T00:53:28+00:53",
+    "start_time": "2021-10-08T09:00:00+01:00",
+    "end_time": "2021-10-08T12:50:00+01:00",
     "start_point": {
         "latitude": 47.48425178,
         "longitude": 7.732263948,
@@ -27,5 +27,11 @@
         "longitude": 7.856322842,
         "elevation": 0
     },
-    "points": null
+    "points": [
+        {
+            "latitude": 47.39267,
+            "longitude": 7.856513,
+            "elevation": 572
+        }
+    ]    
 }

@@ -1,0 +1,52 @@
+{{ define "content" }}
+<div class="container">
+  {{ $activities := .Site.GetPage "section" "activities" }}
+  <!-- Filtere die Seiten, um nur diejenigen mit dem Tag "ViaGottardo" einzuschließen -->
+  {{ $filteredPages := where $activities.RegularPages "Params.tags" "intersect" (slice "ViaGottardo") }}
+  {{ $groupedPages := $filteredPages.GroupByDate "2006-01" "desc" }}
+  {{ range $groupedPages }}
+    <h2>{{ i18n .Key }}</h2> <!-- Direkte Anzeige des Gruppierungsschlüssels -->
+    <div class="box-wrapper">
+      {{ range .Pages }}
+        {{ partial "activity-overview" . }}
+      {{ end }}
+    </div>
+  {{ end }}
+</div>
+<div id="mapid" style="height: 400px; padding-bottom: 20px;" class="grid-item full-width">Volle Breite (12)</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var map = L.map('mapid').setView([47.339, 8.05], 13);
+  
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+  
+      // Pfade zu den JSON-Dateien
+      var jsonPaths = [
+        '{{ .Site.BaseURL }}/map-json/viagottardo_altdorf_gurtnellen.json',
+        '{{ .Site.BaseURL }}/map-json/viagottardo_spez_brunnen_altdorf.json',
+        // Füge weitere Pfade hinzu, wie benötigt
+      ];
+  
+      var colors = ['red', 'blue']; // Farben für die verschiedenen Routen
+  
+      jsonPaths.forEach((jsonPath, index) => {
+        fetch(jsonPath)
+          .then(response => response.json())
+          .then(data => {
+            // Zugriff auf die Trackpoints unter dem Schlüssel 'points'
+            var trackpoints = data.points.map(point => [point.latitude, point.longitude]);
+            var polyline = L.polyline(trackpoints, {color: colors[index % colors.length]}).addTo(map);
+            // Zentriert die Karte nicht erneut für jede Route
+          })
+          .catch(error => console.log('Error loading the trackpoints:', error));
+      });
+  
+      // Optional: nach dem Hinzufügen aller Routen kannst du die Karte zentrieren,
+      // um alle Routen einzubeziehen. Dies kann komplexer sein, da es asynchron ist.
+    });
+  </script>
+  
+{{- end }}
