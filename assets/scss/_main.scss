@@ -461,7 +461,46 @@
   align-items: center; /* Zentriert die Items vertikal */
   gap: 20px; /* Fügt etwas Abstand zwischen dem Icon und dem Text hinzu */
 }
+
+/*
+   * animierter zahlen bei viagottardo
+   * * *******/
+
+   .icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Definiert drei Spalten für die Icons */
+    gap: 20px; /* Definiert einen Abstand zwischen den Grid-Items */
+    margin: 0 auto; /* Zentriert das Grid */
+    max-width: 1200px; /* Maximale Breite des Grids, anpassbar */
+    padding: 20px; /* Innenabstand des Grids */
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 40px;
+  }
+
+  .countergottardo {
+    font-family: var(--font-title);
+    font-weight: 800;
+    font-size: clamp(var(--min), var(--val), var(--max));
+    --min: 1.5em;
+    --val: 4vw;
+    --max: 2.25em;
+  }
   
+  .icon-box {
+    display: flex;
+    flex-direction: column; /* Stellt das Icon über dem Text dar */
+    align-items: center; /* Zentriert die Items im Box */
+  }
+  
+  /* Responsive Anpassung für kleinere Bildschirme */
+  @media (max-width: 768px) {
+    .icon-grid {
+      grid-template-columns: 1fr; /* Stapelt die Items untereinander */
+    }
+  }
+  
+ 
 /*
    * footer
    * * *******/

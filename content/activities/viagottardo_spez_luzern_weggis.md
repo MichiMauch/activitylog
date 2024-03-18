@@ -17,6 +17,7 @@ activity_type: "hiking"
 length_km: 25.77
 duration: "4h 34min"
 moving_time: "4h 21min"
+moving_time_minutes: "261"
 total_ascent: 437
 total_descent: 438
 start_time: "2022-04-29T08:32:44+02:00"

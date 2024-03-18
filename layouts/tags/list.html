@@ -1,8 +1,49 @@
 {{ define "content" }}
-<div class="container">
   {{ $activities := .Site.GetPage "section" "activities" }}
   <!-- Filtere die Seiten, um nur diejenigen mit dem Tag "ViaGottardo" einzuschließen -->
   {{ $filteredPages := where $activities.RegularPages "Params.tags" "intersect" (slice "ViaGottardo") }}
+  <!-- Berechnung der Gesamtkilometer -->
+  {{ $totalKm := 0 }}
+  {{ range $filteredPages }}
+    {{ $km := .Params.length_km }}
+    {{ $totalKm = add $totalKm $km }}
+  {{ end }}  
+  <!-- Ende Berechnung der Gesamtkilometer -->
+  <!-- Berechnung der Gesamtdauer -->
+  {{ $totalMinuten := 0 }}
+  {{ range $filteredPages }}
+    {{ with .Params.moving_time_minutes }}
+      {{ $zeit := . | int }}  <!-- Konvertiert den Wert in eine Ganzzahl -->
+      {{ $totalMinuten = add $totalMinuten $zeit }}
+    {{ end }}
+  {{ end }}
+  {{ $totalStunden := div $totalMinuten 60 }}
+  {{ $verbleibendeMinuten := mod $totalMinuten 60 }}
+  <!-- Ende Berechnung der Gesamtdauer -->
+  <!-- Berechnung der Höhenmeter -->
+  {{ $totalHoehe := 0 }}
+  {{ range $filteredPages }}
+      {{ $hoehe := .Params.total_ascent }}  <!-- Versucht, den Wert in eine Ganzzahl zu konvertieren -->
+      {{ $totalHoehe = add $totalHoehe $hoehe }}
+  {{ end }}
+  <div class="icon-grid">
+    <div class="grid-item icon-box">
+      <div id="distance-icon" style="width: 100px; height: 100px;"></div>
+      <div class="countergottardo">{{ $totalKm }}km</div>
+    </div>
+    <div class="grid-item icon-box">
+      <div id="route-icon" style="width: 100px; height: 100px;"></div>
+      <div class="countergottardo">{{ $totalHoehe }}m</div>
+    </div>
+    <div class="grid-item icon-box">
+      <div id="running-icon" style="width: 100px; height: 100px;"></div>
+      <div class="countergottardo">{{ $totalStunden }}:{{ $verbleibendeMinuten }}h</div>
+    </div>
+  </div>
+  <div id="mapid" style="height: 600px; padding-bottom: 20px;" class="grid-item full-width">Volle Breite (12)</div>
+  <div class="container">
+
+  <!-- Ende Berechnung der Gesamthöhe -->
   {{ $groupedPages := $filteredPages.GroupByDate "2006-01" "desc" }}
   {{ range $groupedPages }}
     <h2>{{ i18n .Key }}</h2> <!-- Direkte Anzeige des Gruppierungsschlüssels -->
@@ -13,10 +54,9 @@
     </div>
   {{ end }}
 </div>
-<div id="mapid" style="height: 400px; padding-bottom: 20px;" class="grid-item full-width">Volle Breite (12)</div>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-      var map = L.map('mapid').setView([47.339, 8.05], 13);
+      var map = L.map('mapid').setView([46.80056, 8.22222], 8);
   
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
@@ -42,7 +82,7 @@
         // Füge weitere Pfade hinzu, wie benötigt
       ];
   
-      var colors = ['red', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue', 'blue' ]; // Farben für die verschiedenen Routen
+      var colors = ['blue', 'red'];
   
       jsonPaths.forEach((jsonPath, index) => {
         fetch(jsonPath)
@@ -60,5 +100,35 @@
       // um alle Routen einzubeziehen. Dies kann komplexer sein, da es asynchron ist.
     });
   </script>
-  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialisierung der ersten Animation
+      lottie.loadAnimation({
+        container: document.getElementById('running-icon'), // ID des ersten Containers
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: '{{ .Site.BaseURL }}/aniicons/running.json' // Pfad zur ersten JSON-Datei
+      });
+    
+      // Initialisierung der zweiten Animation
+      lottie.loadAnimation({
+        container: document.getElementById('route-icon'), // ID des zweiten Containers
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: '{{ .Site.BaseURL }}/aniicons/route.json' // Pfad zur zweiten JSON-Datei
+      });
+    
+      // Füge hier weitere lottie.loadAnimation Aufrufe für zusätzliche Icons hinzu
+      lottie.loadAnimation({
+        container: document.getElementById('distance-icon'), // ID des zweiten Containers
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: '{{ .Site.BaseURL }}/aniicons/distance.json' // Pfad zur zweiten JSON-Datei
+      });
+    });
+  </script>
+
 {{- end }}
