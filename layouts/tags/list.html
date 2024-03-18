@@ -26,6 +26,7 @@
       {{ $hoehe := .Params.total_ascent }}  <!-- Versucht, den Wert in eine Ganzzahl zu konvertieren -->
       {{ $totalHoehe = add $totalHoehe $hoehe }}
   {{ end }}
+  <p>Die ViaGottardo durchquert die Schweiz von Basel nach Chiasso, und bei der Bewältigung der Etappen war die Reihenfolge für mich zweitrangig. Ich habe sie in der Reihenfolge angegangen, die mir am besten passte, anstatt mich strikt von Norden nach Süden vorzuarbeiten.</p>
   <div class="icon-grid">
     <div class="grid-item icon-box">
       <div id="distance-icon" style="width: 100px; height: 100px;"></div>
@@ -42,7 +43,6 @@
   </div>
   <div id="mapid" style="height: 600px; padding-bottom: 20px;" class="grid-item full-width">Volle Breite (12)</div>
   <div class="container">
-
   <!-- Ende Berechnung der Gesamthöhe -->
   {{ $groupedPages := $filteredPages.GroupByDate "2006-01" "desc" }}
   {{ range $groupedPages }}
