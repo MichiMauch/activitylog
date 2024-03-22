@@ -17,7 +17,6 @@ activity_type: "hiking"
 length_km: 21.42
 duration: "5h 18min"
 moving_time: "4h 34min"
-moving_time_minutes: "274"
 total_ascent: 880
 total_descent: 910
 start_time: "2023-03-10T09:17:55+01:00"
