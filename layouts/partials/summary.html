@@ -2,11 +2,11 @@
   <div class="card">
     <div class="Box" style="background-image: url('{{ .Params.teaser_image | absURL }}');">
       <div class="link-overlay">
-        <strong>{{ .Title }}</strong>
+        <strong>{{ if gt (len .Title) 56 }}{{ substr .Title 0 56 }}...{{ else }}{{ .Title }}{{ end }}</strong>
       </div>
     </div>
     <div class="details">
-      <div style="font-size:1.4rem"><strong>{{ .Title }}</strong></div>
+      <div style="font-size:1.4rem"><strong>{{ if gt (len .Title) 46 }}{{ substr .Title 0 46 }}...{{ else }}{{ .Title }}{{ end }}</strong></div>
       <div><strong>Aktivität:</strong> {{ i18n .Params.activity_type }}</div>
       <div><strong>Länge:</strong> {{ .Params.length_km }}km</div>
       <div><strong>Höhenmeter:</strong> {{ .Params.total_ascent }}m</div>
