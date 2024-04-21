@@ -31,7 +31,7 @@ difficulty: "Bewertung: Mittel."
 description: "Die 'Grosse Ostersee Runde' beginnt beim Campingplatz Seeshaupt und erstreckt sich über 21,71 km in Seeshaupt, Deutschland. Die Route bietet eine angenehme Mischung aus leichten Auf- und Abstiegen mit insgesamt 183 Metern Aufstieg und 164 Metern Abstieg. Die Gesamtdauer von 5 Stunden und 4 Minuten beinhaltet auch Pausen"
 coat_of_arms_url: "http://commons.wikimedia.org/wiki/Special:FilePath/Wappen%20der%20Gemeinde%20Seeshaupt.svg"
 endcoat_of_arms_url: "http://commons.wikimedia.org/wiki/Special:FilePath/Wappen%20der%20Gemeinde%20Seeshaupt.svg"
-teaser_image: ./images/teaser/grosse_ostersee_runde_gestartet_beim_campingplatz_seeshaupt.png
+teaser_image: ./images/teaser/grosse_ostersee_runde_gestartet_beim_campingplatz_seeshaupt.webp
 gpx_download: /gpx/grosse_ostersee_runde_gestartet_beim_campingplatz_seeshaupt.gpx
 ---
 trackpoints: 

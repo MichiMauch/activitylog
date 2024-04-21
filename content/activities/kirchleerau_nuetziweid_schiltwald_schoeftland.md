@@ -31,7 +31,7 @@ difficulty: "Bewertung: mittel."
 description: "Genießen Sie eine herrliche Fahrradtour von Muhen nach Schöftland über Kirchleerau, Nütziweid und Schiltwald. Die 31,50 km lange Strecke bietet eine angenehme Mischung aus leichten Anstiegen und entspannenden Abfahrten. Die Tour dauert insgesamt 2 Stunden und 25 Minuten, einschließlich Pausen, und bietet ein Gesamterlebnis mit 373 Metern Aufstieg und 367 Metern Abstieg"
 coat_of_arms_url: "http://commons.wikimedia.org/wiki/Special:FilePath/Wappen%20Muhen%20AG.svg"
 endcoat_of_arms_url: "http://commons.wikimedia.org/wiki/Special:FilePath/Wappen%20Muhen%20AG.svg"
-teaser_image: ./images/teaser/kirchleerau_nuetziweid_schiltwald_schoeftland.png
+teaser_image: ./images/teaser/kirchleerau_nuetziweid_schiltwald_schoeftland.webp
 gpx_download: /gpx/kirchleerau_nuetziweid_schiltwald_schoeftland.gpx
 ---
 trackpoints: 

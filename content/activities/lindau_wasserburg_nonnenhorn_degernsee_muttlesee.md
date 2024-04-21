@@ -31,7 +31,7 @@ difficulty: "Bewertung: mittel."
 description: "Fahre von Unterhochsteg aus auf der 40,65 km langen Route über Lindau, Wasserburg, Nonnenhorn, Degernsee und Muttlesee. Genieße die Landschaft und erlebe insgesamt 371 m Aufstieg und 373 m Abstieg. Die Tour dauert 2 Stunden und 44 Minuten mit Pausen"
 coat_of_arms_url: ""
 endcoat_of_arms_url: ""
-teaser_image: ./images/teaser/lindau_wasserburg_nonnenhorn_degernsee_muttlesee.png
+teaser_image: ./images/teaser/lindau_wasserburg_nonnenhorn_degernsee_muttlesee.webp
 gpx_download: /gpx/lindau_wasserburg_nonnenhorn_degernsee_muttlesee.gpx
 ---
 trackpoints: 

@@ -31,7 +31,7 @@ difficulty: "Bewertung: Leicht."
 description: "Erkunden Sie bei einem regnerischen Spaziergang die malerischen Straßen von Salzburg. Die 4,30 km lange Strecke bietet einen Gesamtaufstieg von 112 m und einen Gesamtabstieg von 119 m, wobei Sie die Schönheit der Stadt genießen können. Starten Sie Ihre Tour in , Österreich und nehmen Sie sich etwa 1 Stunde und 55 Minuten Zeit für diese entspannte Wanderung"
 coat_of_arms_url: ""
 endcoat_of_arms_url: ""
-teaser_image: ./images/teaser/regnerischer_spaziergang_durch_salzburg.png
+teaser_image: ./images/teaser/regnerischer_spaziergang_durch_salzburg.webp
 gpx_download: /gpx/regnerischer_spaziergang_durch_salzburg.gpx
 ---
 trackpoints: 

@@ -31,7 +31,7 @@ difficulty: "Bewertung: Mittel."
 description: "Fahre durch die malerischen Almen der Faistenberg-Landschaft mit atemberaubendem Blick auf die Alpen. Die 41,84 km lange Route ab Seeshaupt in Münsing beinhaltet einen gesamten Aufstieg von 348 m und Abstieg von 376 m. Genieße die Schönheit der Natur und lass dich von der ruhigen Umgebung inspirieren"
 coat_of_arms_url: "http://commons.wikimedia.org/wiki/Special:FilePath/DEU%20M%C3%BCnsing%20COA.svg"
 endcoat_of_arms_url: "http://commons.wikimedia.org/wiki/Special:FilePath/Wappen%20der%20Gemeinde%20Seeshaupt.svg"
-teaser_image: ./images/teaser/blick_auf_das_alpenpanorama_almlandschaft_faistenberg_gestartet_in_seeshaupt.png
+teaser_image: ./images/teaser/blick_auf_das_alpenpanorama_almlandschaft_faistenberg_gestartet_in_seeshaupt.webp
 gpx_download: /gpx/blick_auf_das_alpenpanorama_almlandschaft_faistenberg_gestartet_in_seeshaupt.gpx
 ---
 trackpoints: 

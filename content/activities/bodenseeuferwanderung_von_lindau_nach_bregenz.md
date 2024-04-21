@@ -31,7 +31,7 @@ difficulty: "Bewertung: leicht."
 description: "Erlebe eine malerische Wanderung entlang des Bodensees von Lindau nach Bregenz. Genieße die frische Luft, die atemberaubende Aussicht und entspannte Spazierwege. Die 12,67 km lange Strecke bietet kaum Anstiege oder Abfahrten, was die Wanderung angenehm und entspannend macht. Die Gesamtdauer von 3 Stunden und 55 Minuten lässt genug Zeit für Pausen und Fotomomente"
 coat_of_arms_url: ""
 endcoat_of_arms_url: ""
-teaser_image: ./images/teaser/bodenseeuferwanderung_von_lindau_nach_bregenz.png
+teaser_image: ./images/teaser/bodenseeuferwanderung_von_lindau_nach_bregenz.webp
 gpx_download: /gpx/bodenseeuferwanderung_von_lindau_nach_bregenz.gpx
 ---
 trackpoints: 

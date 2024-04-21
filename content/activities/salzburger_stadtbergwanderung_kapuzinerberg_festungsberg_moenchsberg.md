@@ -31,7 +31,7 @@ difficulty: "Bewertung: mittel."
 description: "Entdecke die Salzburger Stadtberge Kapuzinerberg, Festungsberg und Mönchsberg auf dieser 13,43 km langen Wanderung. Erkunde die malerischen Wege, genieße atemberaubende Ausblicke und tauche in die Geschichte Salzburgs ein. Mit einem Gesamtaufstieg und -abstieg von jeweils 485 Metern bietet die Tour eine ausgewogene Herausforderung"
 coat_of_arms_url: ""
 endcoat_of_arms_url: ""
-teaser_image: ./images/teaser/salzburger_stadtbergwanderung_kapuzinerberg_festungsberg_moenchsberg.png
+teaser_image: ./images/teaser/salzburger_stadtbergwanderung_kapuzinerberg_festungsberg_moenchsberg.webp
 gpx_download: /gpx/salzburger_stadtbergwanderung_kapuzinerberg_festungsberg_moenchsberg.gpx
 ---
 trackpoints: 
