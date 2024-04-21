@@ -16,6 +16,12 @@ other = "Schweiz"
 [Schweiz]
 other = "Schweiz"
 
+[Deutschland]
+other = "Deutschland"
+
+['Österreich']
+other = "Österreich"
+
 [Monday]
 other = "Montag"
 
