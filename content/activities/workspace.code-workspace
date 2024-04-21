@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../GO/gpx"
+		},
+		{
+			"path": "../../../../GO/example-helloworld"
+		}
+	],
+	"settings": {}
+}
