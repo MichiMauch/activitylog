@@ -397,9 +397,15 @@
     gap: 10px; /* Optional: Fügt einen Abstand zwischen den verschachtelten Spalten hinzu */
 }
 
+@media (max-width: 768px) {
+  .nested-grid {
+    grid-template-columns: 1fr; /* Staple Spalten untereinander auf mobilen Geräten */
+  }
+}
 .nested-item {
     /* Stile für die verschachtelten Items. Anpassen nach Bedarf */
 }
+
 /*
    * downoadbutton
    * * *******/
@@ -407,7 +413,7 @@
     display: inline-flex;
     align-items: center; /* Zentriert den Button-Text vertikal */
     justify-content: center; /* Zentriert den Button-Text horizontal */
-    padding: 10px 80px;
+    padding: 10px 20px;
     color: #fff;
     background-color: var(--accent-color);
     border-radius: 5px;
