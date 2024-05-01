@@ -10,15 +10,31 @@
   {{ end }}  
   <!-- Ende Berechnung der Gesamtkilometer -->
   <!-- Berechnung der Gesamtdauer -->
-  {{ $totalMinuten := 0 }}
+  {{ $totalHours := 0 }}
+  {{ $totalMinutes := 0 }}
   {{ range $filteredPages }}
-    {{ with .Params.moving_time_minutes }}
-      {{ $zeit := . | int }}  <!-- Konvertiert den Wert in eine Ganzzahl -->
-      {{ $totalMinuten = add $totalMinuten $zeit }}
+    {{ $currentPage := . }}
+    {{ with .Params.moving_time }}
+      {{ $timeParts := split . " " }}
+      {{ if eq (len $timeParts) 2 }}
+        {{ $hoursRaw := index $timeParts 0 }}
+        {{ $minutesRaw := index $timeParts 1 }}
+        {{ $hours := replace $hoursRaw "h" "" 1 }}
+        {{ $minutes := replace $minutesRaw "min" "" 1 }}
+        {{ $totalHours = add $totalHours (int $hours) }}
+        {{ $totalMinutes = add $totalMinutes (int $minutes) }}
+      {{ else }}
+        {{ printf "Format der Zeit nicht korrekt oder unvollständig für: %s" $currentPage.Permalink }}
+      {{ end }}
+    {{ else }}
+      {{ printf "Keine Bewegungszeit gefunden für: %s" $currentPage.Permalink }}
     {{ end }}
   {{ end }}
-  {{ $totalStunden := div $totalMinuten 60 }}
-  {{ $verbleibendeMinuten := mod $totalMinuten 60 }}
+  {{ $additionalHours := div $totalMinutes 60 }}
+  {{ $remainingMinutes := mod $totalMinutes 60 }}
+  {{ $totalStunden := add $totalHours $additionalHours }}     
+
+            
   <!-- Ende Berechnung der Gesamtdauer -->
   <!-- Berechnung der Höhenmeter -->
   {{ $totalHoehe := 0 }}
@@ -30,15 +46,15 @@
   <div class="icon-grid">
     <div class="grid-item icon-box">
       <div id="distance-icon" style="width: 100px; height: 100px;"></div>
-      <div class="countergottardo">{{ $totalKm }}km</div>
+      <div class="countergottardo">{{ $totalKm }} km</div>
     </div>
     <div class="grid-item icon-box">
       <div id="route-icon" style="width: 100px; height: 100px;"></div>
-      <div class="countergottardo">{{ $totalHoehe }}m</div>
+      <div class="countergottardo">{{ $totalHoehe }} m</div>
     </div>
     <div class="grid-item icon-box">
       <div id="running-icon" style="width: 100px; height: 100px;"></div>
-      <div class="countergottardo">{{ $totalStunden }}:{{ $verbleibendeMinuten }}h</div>
+      <div class="countergottardo">{{ $totalStunden }}:{{ $remainingMinutes }}h</div>
     </div>
   </div>
   <div id="mapid" style="height: 600px; padding-bottom: 20px;" class="grid-item full-width">Volle Breite (12)</div>
