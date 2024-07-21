@@ -28,7 +28,7 @@ end_point_lon: 11.87096
 elevation_start: 0.00
 elevation_end: 0.00
 difficulty: "Bewertung: mittel."
-description: "Erkunden Sie die landschaftlich reizvolle Strecke "Bärenbadalm im Zillergrund" in Hollenzen, Österreich. Mit einer Länge von 37,76 km und einem Gesamtaufstieg von 778 Metern bietet die Tour atemberaubende Ausblicke. Genießen Sie 4 Stunden und 18 Minuten voller Freude, inklusive Pausen und einem Gesamtabstieg von 825 Metern"
+description: "Erkunden Sie die landschaftlich reizvolle Strecke Bärenbadalm im Zillergrund in Hollenzen, Österreich. Mit einer Länge von 37,76 km und einem Gesamtaufstieg von 778 Metern bietet die Tour atemberaubende Ausblicke. Genießen Sie 4 Stunden und 18 Minuten voller Freude, inklusive Pausen und einem Gesamtabstieg von 825 Metern"
 coat_of_arms_url: ""
 endcoat_of_arms_url: ""
 teaser_image: ./images/teaser/baerenbadalm_im_zillergrund.webp
