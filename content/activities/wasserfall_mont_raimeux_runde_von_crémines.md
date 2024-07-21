@@ -28,7 +28,7 @@ end_point_lon: 7.43589
 elevation_start: 0.00
 elevation_end: 0.00
 difficulty: "Bewertung: mittel."
-description: "Die Wanderung "Wasserfall - Mont Raimeux Runde von Crémines" in der Schweiz bietet eine 14,45 km lange Strecke mit einem Gesamtaufstieg von 710 Metern und einem Gesamtabstieg von 696 Metern. Die Route startet in Crémines und dauert insgesamt 4 Stunden und 34 Minuten, inklusive Pausen. Die landschaftlich reizvolle Strecke bietet herrliche Ausblicke und führt an einem Wasserfall vorbei"
+description: "Die Wanderung Wasserfall - Mont Raimeux Runde von Crémines in der Schweiz bietet eine 14,45 km lange Strecke mit einem Gesamtaufstieg von 710 Metern und einem Gesamtabstieg von 696 Metern. Die Route startet in Crémines und dauert insgesamt 4 Stunden und 34 Minuten, inklusive Pausen. Die landschaftlich reizvolle Strecke bietet herrliche Ausblicke und führt an einem Wasserfall vorbei"
 coat_of_arms_url: "http://commons.wikimedia.org/wiki/Special:FilePath/Cremines-coat%20of%20arms.svg"
 endcoat_of_arms_url: "http://commons.wikimedia.org/wiki/Special:FilePath/Cremines-coat%20of%20arms.svg"
 teaser_image: ./images/teaser/wasserfall_mont_raimeux_runde_von_crémines.webp
