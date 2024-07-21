@@ -27,8 +27,8 @@ end_point_lat: 47.17524
 end_point_lon: 11.87093
 elevation_start: 0.00
 elevation_end: 0.00
-difficulty: "Diese Tour ist als "mittel" einzuschätzen."
-description: "Erleben Sie die malerische Landschaft von Hollenzen, Österreich, während der 62,63 km langen Radtour 'Zillertal raus - Zillertal rein'. Die Route umfasst insgesamt 239 Meter Aufstieg und 228 Meter Abstieg, mit einer Gesamtdauer von 4 Stunden und 26 Minuten inklusive Pausen"
+difficulty: "Mittel"
+description: "Erleben Sie die malerische Landschaft von Hollenzen, Österreich, während der 62,63 km langen Radtour -- Zillertal raus - Zillertal rein --. Die Route umfasst insgesamt 239 Meter Aufstieg und 228 Meter Abstieg, mit einer Gesamtdauer von 4 Stunden und 26 Minuten inklusive Pausen"
 coat_of_arms_url: ""
 endcoat_of_arms_url: ""
 teaser_image: ./images/teaser/zillertal_raus_zillertal_rein.webp
