@@ -27,7 +27,7 @@ end_point_lat: 47.17521
 end_point_lon: 11.87095
 elevation_start: 0.00
 elevation_end: 0.00
-difficulty: "Mittel"
+difficulty: "Die Route bietet eine angenehme Wanderzeit von 5 Stunden und 29 Minuten, inklusive Pausen, und ist mit dem Schwierigkeitsgrad "mittel" zu bewerten."
 description: "Die Wanderung von Hollenzen zum Stillup Klamm führt über eine malerische 15,49 km lange Strecke. Genießen Sie abwechslungsreiche Landschaften mit einem Gesamtaufstieg von 486 Metern und einem Gesamtabstieg von 474 Metern"
 coat_of_arms_url: ""
 endcoat_of_arms_url: ""
